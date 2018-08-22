@@ -1,7 +1,7 @@
 const mysql = require('mysql');
 
 module.exports = (app) => {
-  app.get('/', (req, res) => {
+  app.get('/api/leaderboard', (req, res) => {
     const connection = mysql.createConnection({
       host: 'localhost',
       user: 'root',
