@@ -11,7 +11,8 @@
     "start": "node index.js",
     "clicks-server": "nodemon index.js",
     "clicks-per-min": "npm run start --prefix clicks-per-min",
-    "dev": "concurrently \"npm run clicks-server\" \"npm run clicks-per-min\""
+    "dev": "concurrently \"npm run clicks-server\" \"npm run clicks-per-min\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix clicks-per-min && npm run build --prefix clicks-per-min"
   },
   "author": "",
   "license": "ISC",
